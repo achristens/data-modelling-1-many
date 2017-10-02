@@ -78,10 +78,14 @@ What city is 4740 McDermott Street in?
     ----+--------+--------------+-------------
      11 | Ottawa |         1826 |          14
     (1 row)
-    
+
 
 What province is 4740 McDermott Street in?
-
+    one_to_many_assignment=# SELECT * FROM provinces WHERE id = 14;
+     id |  name   | year_founded | country_id
+    ----+---------+--------------+------------
+     14 | Ontario |         1867 |          1
+    (1 row)
 
 What country is 4740 McDermott Street in?
 
