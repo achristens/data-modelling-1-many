@@ -38,10 +38,20 @@ Who wrote the article called 'Coding Bootcamps and Emotional Labor'?
     -------------------
      Tilde Ann Thurium
     (1 row)
-    
+
 Write a series of SQL queries to find out how many provinces are in Canada.
+    one_to_many_assignment=# SELECT(id) FROM countries WHERE name='Canada';
+     id
+    ----
+      1
+    (1 row)
 
-
+    one_to_many_assignment=# SELECT COUNT(name) FROM provinces WHERE country_id =1;
+     count
+    -------
+        14
+    (1 row)
+    
 How many people live at 4740 McDermott Street?
 
 
