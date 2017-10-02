@@ -124,5 +124,24 @@ Find the person named 'Destini Davis' and then use a series of SQL queries to fi
     ----+--------+--------------+-----------------
       1 | Canada |         1867 | beaver
     (1 row)
-        
+
 How many articles has Aditya Mukerjee written?
+    one_to_many_assignment=# SELECT(id) FROM authors WHERE name='Aditya Mukerjee';
+     id
+    ----
+      2
+    (1 row)
+
+    one_to_many_assignment=# SELECT COUNT(title) FROM articles WHERE author_id = 2;
+     count
+    -------
+         1
+    (1 row)
+
+
+    BONUS, JUST WANTED TO FIND THE TITLE.
+    one_to_many_assignment=# SELECT(title) FROM articles WHERE author_id = 2;
+                              title
+    ---------------------------------------------------------
+     I Can Text You A Pile of Poo, But I Can’t Write My Name
+    (1 row)
