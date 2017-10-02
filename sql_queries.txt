@@ -51,8 +51,19 @@ Write a series of SQL queries to find out how many provinces are in Canada.
     -------
         14
     (1 row)
-    
+
 How many people live at 4740 McDermott Street?
+    SELECT(id) FROM residences WHERE address = '4740 McDermott Street';
+     id
+    ----
+      9
+    (1 row)
+
+    one_to_many_assignment=# SELECT COUNT(name) FROM persons WHERE residence_id = 9;
+    count
+    -------
+         2
+    (1 row)
 
 
 What city is 4740 McDermott Street in?
