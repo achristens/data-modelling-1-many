@@ -1,0 +1,59 @@
+Find the author with the name 'Kara Melton' and then select all the articles she has written.
+    one_to_many_assignment=# SELECT * FROM authors WHERE name='Kara Melton';
+     id |    name     |                                                                                                                   bio
+    ----+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      8 | Kara Melton | Kara is a Master’s Candidate in the Department of Gender Studies at Queen’s University. She researches questions of racial progress and spends time thinking on community building, startups, tech and design, board games, and donuts.
+    (1 row)
+
+    one_to_many_assignment=# SELECT(title) FROM articles WHERE author_id = 8;
+                                                  title
+    --------------------------------------------------------------------------------------------------
+     How Tech Business Models Come From Marginalized Communities, But Startups Are Still Mostly White
+     Confronting the Assumption of Whiteness in Virtual Spaces
+    (2 rows)
+
+
+Find Ontario in the provinces table and then find all the cities in that province.
+    one_to_many_assignment=# SELECT(id) FROM provinces WHERE name = 'Ontario';
+     id
+    ----
+     14
+
+     one_to_many_assignment=# SELECT * FROM cities WHERE province_id = 14;
+      id |  name   | year_founded | province_id
+     ----+---------+--------------+-------------
+       8 | Toronto |         1793 |          14
+      11 | Ottawa  |         1826 |          14
+     (2 rows)
+
+Who wrote the article called 'Coding Bootcamps and Emotional Labor'?
+    SELECT(author_id) FROM articles WHERE title ='Coding Bootcamps and Emotional Labor';
+     author_id
+    -----------
+             4
+    (1 row)
+
+    one_to_many_assignment=# SELECT(name) FROM authors WHERE id = 4;
+           name
+    -------------------
+     Tilde Ann Thurium
+    (1 row)
+    
+Write a series of SQL queries to find out how many provinces are in Canada.
+
+
+How many people live at 4740 McDermott Street?
+
+
+What city is 4740 McDermott Street in?
+
+
+What province is 4740 McDermott Street in?
+
+
+What country is 4740 McDermott Street in?
+
+Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
+
+
+How many articles has Aditya Mukerjee written?
